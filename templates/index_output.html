@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index Output</title>
+
+    <style>
+        h1{
+            margin-left: 70px;
+            font-family: sans-serif;
+            text-decoration: underline;
+        }
+        h2{
+
+            font-family: sans-serif;
+            margin-left: 70px;
+        }
+        P{
+            font-family: sans-serif;
+            margin-left: 70px;
+
+        }
+        .container{
+            background-color: white;
+            margin-left: 15%;
+            margin-right: 15%;
+            padding-top: 1px;
+
+        }
+    </style>
+</head>
+<body bgcolor="#808080">
+
+<div class="container">
+    <h1 style="font-size: 300%; text-align : left">Index</h1>
+
+    {% for ind in list %}
+
+        {% if ind in alpha %}
+        <h2 >{{ ind }}</h2>
+        {% else %}
+        <p>{{ ind }}</p>
+        {% endif %}
+
+    {% endfor %}
+</div>
+</body>
+</html>
